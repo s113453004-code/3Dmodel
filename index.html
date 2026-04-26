@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Model Viewer</title>
+  <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0f0f1a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h1 {
+      margin-top: 30px;
+      font-size: 1.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #c8a4f8;
+    }
+    p {
+      margin: 8px 0 20px;
+      font-size: 0.9rem;
+      color: #888;
+      letter-spacing: 2px;
+    }
+    babylon {
+      width: 90vw;
+      height: 75vh;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(200, 164, 248, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>3D Model</h1>
+  <p>Interactive Viewer</p>
+  <babylon model="cac-1777235450105.glb"></babylon>
+</body>
+</html>
