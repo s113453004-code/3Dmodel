@@ -30,10 +30,27 @@
     }
     model-viewer {
       width: 90vw;
-      height: 75vh;
+      height: 65vh;
       border-radius: 16px;
       box-shadow: 0 0 40px rgba(200, 164, 248, 0.2);
     }
+    .buttons {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    button {
+      background: #2a1a4a;
+      color: #c8a4f8;
+      border: 1px solid #c8a4f8;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    button:hover { background: #c8a4f8; color: #0f0f1a; }
     footer {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -47,12 +64,27 @@
   <h1>3D Model</h1>
   <p>Interactive Viewer</p>
   <model-viewer
-  src="cac-1777302115862.glb"
-  auto-rotate
-  camera-controls
-  
-  autoplay>
-</model-viewer>
+    id="viewer"
+    src="cac-1777302115862.glb"
+    auto-rotate
+    camera-controls
+    autoplay>
+  </model-viewer>
+  <div class="buttons">
+    <button onclick="playAnim('mixamo.com')">Idle</button>
+    <button onclick="playAnim('Untitled@Flair')">Flair</button>
+    <button onclick="playAnim('Untitled@SwingDancing')">Swing Dance</button>
+    <button onclick="playAnim('Untitled@Boxing')">Boxing</button>
+    <button onclick="playAnim('Untitled@Thankful')">Thankful</button>
+    <button onclick="playAnim('Untitled@Sitting')">Sitting</button>
+  </div>
   <footer>Made by 113453004 教院學士班 鄭宇筑</footer>
+  <script>
+    function playAnim(name) {
+      const viewer = document.getElementById('viewer');
+      viewer.animationName = name;
+      viewer.play();
+    }
+  </script>
 </body>
 </html>
