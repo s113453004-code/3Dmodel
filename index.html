@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>3D Model Viewer</title>
-  <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -28,18 +28,30 @@
       color: #888;
       letter-spacing: 2px;
     }
-    babylon {
+    model-viewer {
       width: 90vw;
       height: 75vh;
       border-radius: 16px;
-      overflow: hidden;
       box-shadow: 0 0 40px rgba(200, 164, 248, 0.2);
+    }
+    footer {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+      color: #555;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
   <h1>3D Model</h1>
   <p>Interactive Viewer</p>
-  <babylon modell="cac-1777282732783.glb"></babylon>
+  <model-viewer
+    src="cac-1777282732783.glb"
+    auto-rotate
+    camera-controls
+    autoplay>
+  </model-viewer>
+  <footer>Made by 113453004 教院學士班 鄭宇筑</footer>
 </body>
 </html>
